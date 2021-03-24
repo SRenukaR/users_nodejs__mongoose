@@ -6,7 +6,7 @@ module.exports = {
     getUsers: function( callback) {
         fs.readFile(filePath, function(err, data) {
             if (err) return callback(err);
-            callback(null, data);
+            // callback(ṣ,./null, datạ);
         });
     },
      adduser: function(newuser,callback){

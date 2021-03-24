@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+const mongoose = require('mongoose');
+mongoose.set('useNewUrlParser', true);
+mongoose.connect('mongodb://localhost:27017/user').then(()=>console.log('Connected to MongoDB')).catch((err)=> console.error('Failed to connect to the mongodb'));
+
 //addding middleware to parse the response body
 app.use(express.json());
 
